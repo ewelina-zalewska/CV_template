@@ -5,9 +5,9 @@ export const CurriculumVitae = () => {
 	return (
 		<div id="container">
 			<CurriculumVitaeMainInformation />
-			<div>
-				<CurriculumVitaeDescription />
-				<CurriculumVitaeDescription />
+			<div id="aboutMeSection">
+				<CurriculumVitaeDescription title="experience" />
+				<CurriculumVitaeDescription title="education" />
 			</div>
 		</div>
 	);
