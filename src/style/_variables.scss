@@ -1,5 +1,5 @@
 ﻿$bg-color: #d1ccc3;
-
+$bordertopOfAboutMeSection: #1c345e;
 $container-color: #001b4a;
 $container-gradient: radial-gradient(
 	circle at 50% 50%,
@@ -8,18 +8,19 @@ $container-gradient: radial-gradient(
 	#1c345e
 );
 $titleHeight: 15vh;
-$containerHeight: calc(100vh - #{$titleHeight * 2});
+$containerHeight: calc(100vh - #{$titleHeight * 1.5});
 
 $font-size: 24px;
 $font-stack: "Spectral SC", "Roboto Flex", sans-serif;
 
 $imageHeight: calc(#{$containerHeight} - 80px);
-$mainInformationHeight: calc((#{$containerHeight} - #{imageHeight}));
+$mainInformationSectionHeight: calc((#{$containerHeight} - #{imageHeight}));
 
 $road-sign-image: url("@/assets/images/road-sign-image.webp");
+$about-me-headline-image: url("@/assets/images/about_me_headline.webp");
 
 $signature-color: #f0532a;
 
 //media query-breakpoints
 $smallSize: 501px;
-$mediumSize: 1024px;
+$mediumSize: 1150px;

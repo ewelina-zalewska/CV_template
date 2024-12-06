@@ -1,5 +1,7 @@
 @use "variables.scss";
 @use "scrollbar.scss";
+@use "mainInformation.scss";
+@use "aboutMeSection.scss";
 
 * {
 	margin: 0;
@@ -10,7 +12,7 @@ body {
 	color: variables.$bg-color;
 	#title {
 		display: flex;
-		justify-items: center;
+		justify-content: center;
 		align-items: center;
 		width: 100%;
 		height: variables.$titleHeight;
@@ -19,7 +21,8 @@ body {
 		h1 {
 			font-size: variables.$font-size;
 			text-transform: uppercase;
-			margin: 0 auto;
+			text-align: center;
+			margin-top: 0;
 		}
 	}
 	#container {
@@ -34,6 +37,7 @@ body {
 
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 
 		font-size: small;
 		background: variables.$container-gradient;
@@ -41,28 +45,31 @@ body {
 		border-radius: 2px;
 		overflow-x: hidden;
 		overflow-y: auto;
-		@import "mainInformation.scss";
-
-		#description {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-		}
 	}
 
 	@media (min-height: variables.$smallSize) {
 		#container {
 			top: 50%;
 			width: 85%;
+			#aboutMeSection {
+				height: auto;
+			}
+			#mainInformation {
+				height: auto;
+				.road-sign-image {
+					min-height: 250px;
+				}
+			}
 		}
 	}
 
 	@media (min-width: variables.$mediumSize) {
 		#container {
 			flex-direction: row;
-			font-size: medium;
+
 			#mainInformation {
 				flex-basis: 40%;
+				min-width: 300px;
 				font-size: small;
 				.road-sign-image {
 					margin-top: 5vh;
@@ -75,6 +82,22 @@ body {
 					background-size: cover;
 				}
 			}
+			#aboutMeSection {
+				border-top: none;
+				.description > ul > li:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
+	}
+	@media (min-width: 650px) {
+		#container {
+			font-size: 14px;
+		}
+	}
+}
+@media (min-width: 850px) {
+	#container {
+		font-size: 16px;
 	}
 }
