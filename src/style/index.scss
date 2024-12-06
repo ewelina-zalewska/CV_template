@@ -1,24 +1,80 @@
-@use "variables";
+@use "variables.scss";
+@use "scrollbar.scss";
 
 * {
 	margin: 0;
 }
-
 body {
-	background-color: variables.$light-color;
+	background-color: variables.$bg-color;
 	font: 100% variables.$font-stack;
-	color: variables.$dark-color;
+	color: variables.$bg-color;
 	#title {
 		display: flex;
 		justify-items: center;
 		align-items: center;
 		width: 100%;
-		height: 15vh;
+		height: variables.$titleHeight;
 		min-height: variables.$font-size;
+		color: variables.$container-color;
 		h1 {
 			font-size: variables.$font-size;
 			text-transform: uppercase;
 			margin: 0 auto;
+		}
+	}
+	#container {
+		position: absolute;
+		margin-top: variables.$font-size;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		max-width: 1200px;
+		height: variables.$containerHeight;
+
+		display: flex;
+		flex-direction: column;
+
+		font-size: small;
+		background: variables.$container-gradient;
+		box-shadow: 0px 0px 1.5px 1.5px #{variables.$bg-color};
+		border-radius: 2px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		@import "mainInformation.scss";
+
+		#description {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	@media (min-height: variables.$smallSize) {
+		#container {
+			top: 50%;
+			width: 85%;
+		}
+	}
+
+	@media (min-width: variables.$mediumSize) {
+		#container {
+			flex-direction: row;
+			font-size: medium;
+			#mainInformation {
+				flex-basis: 40%;
+				font-size: small;
+				.road-sign-image {
+					margin-top: 5vh;
+					margin-bottom: 5vh;
+					width: 70%;
+					height: 50%;
+					min-height: 200px;
+
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+			}
 		}
 	}
 }

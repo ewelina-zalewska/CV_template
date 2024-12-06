@@ -1,0 +1,25 @@
+﻿$bg-color: #d1ccc3;
+
+$container-color: #001b4a;
+$container-gradient: radial-gradient(
+	circle at 50% 50%,
+	#001841,
+	#001b4a,
+	#1c345e
+);
+$titleHeight: 15vh;
+$containerHeight: calc(100vh - #{$titleHeight * 2});
+
+$font-size: 24px;
+$font-stack: "Spectral SC", "Roboto Flex", sans-serif;
+
+$imageHeight: calc(#{$containerHeight} - 80px);
+$mainInformationHeight: calc((#{$containerHeight} - #{imageHeight}));
+
+$road-sign-image: url("@/assets/images/road-sign-image.webp");
+
+$signature-color: #f0532a;
+
+//media query-breakpoints
+$smallSize: 501px;
+$mediumSize: 1024px;
