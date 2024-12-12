@@ -1,4 +1,4 @@
-﻿$bg-color: #d1ccc3;
+﻿$bg-color: #fffefe;
 $bordertopOfAboutMeSection: #1c345e;
 $container-color: #001b4a;
 $container-gradient: radial-gradient(
@@ -12,6 +12,7 @@ $containerHeight: calc(100vh - #{$titleHeight * 1.5});
 
 $font-size: 24px;
 $font-stack: "Spectral SC", "Roboto Flex", sans-serif;
+$font-color: #fffefe;
 
 $imageHeight: calc(#{$containerHeight} - 80px);
 $mainInformationSectionHeight: calc((#{$containerHeight} - #{imageHeight}));
